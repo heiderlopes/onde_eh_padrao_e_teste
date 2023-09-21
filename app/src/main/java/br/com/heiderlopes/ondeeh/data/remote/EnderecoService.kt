@@ -7,5 +7,5 @@ import retrofit2.http.Path
 
 interface EnderecoService {
     @GET("/ws/{cep}/json")
-    fun pesquisar(@Path("cep") cep: String): Call<Endereco>
+    suspend fun pesquisar(@Path("cep") cep: String) : Endereco
 }
