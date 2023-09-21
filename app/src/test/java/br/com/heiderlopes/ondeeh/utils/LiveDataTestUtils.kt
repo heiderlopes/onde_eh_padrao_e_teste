@@ -1,4 +1,4 @@
-package br.com.heiderlopes.ondeeh
+package br.com.heiderlopes.ondeeh.utils
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData

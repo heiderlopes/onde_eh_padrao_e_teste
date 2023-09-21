@@ -1,9 +1,9 @@
 package br.com.heiderlopes.ondeeh.ui.main
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import br.com.heiderlopes.ondeeh.MainCoroutineRule
+import br.com.heiderlopes.ondeeh.utils.MainCoroutineRule
 import br.com.heiderlopes.ondeeh.data.remote.EnderecoService
-import br.com.heiderlopes.ondeeh.getOrAwaitValue
+import br.com.heiderlopes.ondeeh.utils.getOrAwaitValue
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking

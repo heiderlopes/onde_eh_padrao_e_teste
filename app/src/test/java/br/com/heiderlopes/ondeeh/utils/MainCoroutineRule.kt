@@ -1,4 +1,4 @@
-package br.com.heiderlopes.ondeeh
+package br.com.heiderlopes.ondeeh.utils
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
