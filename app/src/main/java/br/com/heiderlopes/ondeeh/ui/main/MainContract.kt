@@ -7,6 +7,9 @@ interface MainContract {
     interface MainView {
         fun mostraErro(mensagem: String)
         fun mostrarEndereco(endereco: Endereco?)
+        fun mostrarLoading()
+
+        fun esconderLoading()
     }
 
     interface MainPresenter {

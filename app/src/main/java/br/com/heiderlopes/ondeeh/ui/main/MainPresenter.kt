@@ -8,8 +8,10 @@ import retrofit2.Response
 
 class MainPresenter(var mainView: MainContract.MainView) : MainContract.MainPresenter {
     override fun pesquisar(cep: String) {
+        mainView.mostrarLoading()
         if(cep.isEmpty()) {
             mainView.mostraErro("Informe o CEP a ser pesquisado")
+            mainView.esconderLoading()
         } else {
             APIService.instance
                 ?.pesquisar(cep)
@@ -20,10 +22,12 @@ class MainPresenter(var mainView: MainContract.MainView) : MainContract.MainPres
                         } else {
                             mainView.mostraErro("Endereco não encontrado")
                         }
+                        mainView.esconderLoading()
                     }
 
                     override fun onFailure(call: Call<Endereco>, t: Throwable) {
                         mainView.mostraErro(t.message.toString())
+                        mainView.esconderLoading()
                     }
                 })
         }

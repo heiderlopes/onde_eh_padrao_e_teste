@@ -2,6 +2,7 @@ package br.com.heiderlopes.ondeeh.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import br.com.heiderlopes.ondeeh.R
 import br.com.heiderlopes.ondeeh.databinding.ActivityMainBinding
@@ -39,5 +40,13 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
         binding.tvLocalidade.text = endereco?.localidade
         binding.tvLogradouro.text = endereco?.logradouro
         binding.tvUF.text = endereco?.uf
+    }
+
+    override fun mostrarLoading() {
+        binding.loading.visibility = View.VISIBLE
+    }
+
+    override fun esconderLoading() {
+        binding.loading.visibility = View.GONE
     }
 }

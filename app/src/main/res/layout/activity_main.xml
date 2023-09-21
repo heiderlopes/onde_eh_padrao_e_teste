@@ -1,83 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Onde Eh?"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainActivity">
 
-    <EditText
-        android:id="@+id/etCep"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Informe o CEP que deseja pesquisar"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Onde Eh?"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btPesquisar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Pesquisar"
-        app:layout_constraintEnd_toEndOf="@+id/etCep"
-        app:layout_constraintStart_toStartOf="@+id/etCep"
-        app:layout_constraintTop_toBottomOf="@+id/etCep" />
+        <EditText
+            android:id="@+id/etCep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Informe o CEP que deseja pesquisar"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <TextView
-        android:id="@+id/tvLogradouro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        tools:text="Logradouro"
-        app:layout_constraintEnd_toEndOf="@+id/btPesquisar"
-        app:layout_constraintStart_toStartOf="@+id/btPesquisar"
-        app:layout_constraintTop_toBottomOf="@+id/btPesquisar" />
+        <Button
+            android:id="@+id/btPesquisar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pesquisar"
+            app:layout_constraintEnd_toEndOf="@+id/etCep"
+            app:layout_constraintStart_toStartOf="@+id/etCep"
+            app:layout_constraintTop_toBottomOf="@+id/etCep" />
 
-    <TextView
-        android:id="@+id/tvBairro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        tools:text="Bairro"
-        app:layout_constraintEnd_toEndOf="@+id/tvLogradouro"
-        app:layout_constraintStart_toStartOf="@+id/tvLogradouro"
-        app:layout_constraintTop_toBottomOf="@+id/tvLogradouro" />
+        <TextView
+            android:id="@+id/tvLogradouro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="@+id/btPesquisar"
+            app:layout_constraintStart_toStartOf="@+id/btPesquisar"
+            app:layout_constraintTop_toBottomOf="@+id/btPesquisar"
+            tools:text="Logradouro" />
 
-    <TextView
-        android:id="@+id/tvLocalidade"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        tools:text="Localidade"
-        app:layout_constraintEnd_toEndOf="@+id/tvBairro"
-        app:layout_constraintStart_toStartOf="@+id/tvBairro"
-        app:layout_constraintTop_toBottomOf="@+id/tvBairro" />
+        <TextView
+            android:id="@+id/tvBairro"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvLogradouro"
+            app:layout_constraintStart_toStartOf="@+id/tvLogradouro"
+            app:layout_constraintTop_toBottomOf="@+id/tvLogradouro"
+            tools:text="Bairro" />
 
-    <TextView
-        android:id="@+id/tvUF"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        tools:text="UF"
-        app:layout_constraintEnd_toEndOf="@+id/tvLocalidade"
-        app:layout_constraintStart_toStartOf="@+id/tvLocalidade"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocalidade" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvLocalidade"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvBairro"
+            app:layout_constraintStart_toStartOf="@+id/tvBairro"
+            app:layout_constraintTop_toBottomOf="@+id/tvBairro"
+            tools:text="Localidade" />
+
+        <TextView
+            android:id="@+id/tvUF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvLocalidade"
+            app:layout_constraintStart_toStartOf="@+id/tvLocalidade"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocalidade"
+            tools:text="UF" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:visibility="gone"
+        android:id="@+id/loading">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carregando"/>
+    </LinearLayout>
+</FrameLayout>
